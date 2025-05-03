@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parlancia - Language Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <h1>Parlancia</h1>
+                <div class="sound-icon">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+            </div>
+            <div class="greeting-container">
+                <div class="greeting">Hello</div>
+                <div class="greeting">Hallo</div>
+                <div class="greeting">Hola</div>
+                <div class="greeting">Ndewo</div>
+                <div class="greeting">你好</div>
+                <div class="greeting">Bonjour</div>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-button">
+                    <i class="fas fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="tab-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="welcome">Welcome</button>
+                    <button class="tab-btn" data-tab="signup">Sign Up</button>
+                    <button class="tab-btn" data-tab="gallery">Gallery</button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Welcome Tab -->
+                    <div class="tab-pane active" id="welcome">
+                        <h2>Welcome to Parlancia!</h2>
+                        <p>Your first step towards mastering new languages and connecting with a global community of learners starts here.</p>
+                        
+                        <p>To get started, simply create an account or log back in by entering your email address, phone number, and password. Alternatively, you can sign up using Google or Facebook.</p>
+                        
+                        <p>If you already have an account, please scroll down and click the "Log in" button to access your courses.</p>
+                        <p>If you want to learn more about Parlancia and how our platform works, watch the introductory video below.</p>
+                        
+                        <div class="video-container">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Watch Introduction Video</span>
+                            </div>
+                        </div>
+                        
+                        <div class="features">
+                            <div class="feature">
+                                <i class="fas fa-globe"></i>
+                                <h3>Learn 30+ Languages</h3>
+                                <p>From Spanish to Mandarin, we've got you covered.</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-users"></i>
+                                <h3>Community Learning</h3>
+                                <p>Practice with native speakers around the world.</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-certificate"></i>
+                                <h3>Get Certified</h3>
+                                <p>Earn internationally recognized certificates.</p>
+                            </div>
+                        </div>
+                        
+                        <button class="btn primary-btn get-started-btn" id="getStartedBtn">Get Started</button>
+                    </div>
+
+                    <!-- Sign Up Tab -->
+                    <div class="tab-pane" id="signup">
+                        <h2>Sign Up</h2>
+                        
+                        <form id="signup-form">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" placeholder="Enter your first name" required>
+                                <div class="validation-message"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" placeholder="Enter your last name" required>
+                                <div class="validation-message"></div>
+                            </div>
+                            <p class="name-notice">Please create an account using your official names. The name you enter here will appear on your certificate upon completion.</p>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Enter your email address" required>
+                                <div class="validation-message"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+234 8123456789" required>
+                                <div class="validation-message"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <div class="password-container">
+                                    <input type="password" id="password" placeholder="Create a password" required>
+                                    <i class="fas fa-eye toggle-password"></i>
+                                </div>
+                                <div class="validation-message"></div>
+                                <div class="password-strength">
+                                    <div class="strength-bar">
+                                        <div class="strength-progress"></div>
+                                    </div>
+                                    <div class="strength-text"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                                <div class="validation-message"></div>
+                            </div>
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="privacy" required>
+                                <label for="privacy">I have read and agree to Parlancia <a href="#" class="privacy-link">Privacy Policy</a></label>
+                                <div class="validation-message"></div>
+                            </div>
+                            <button type="submit" class="btn primary-btn">Sign Up</button>
+                            
+                            <div class="or-divider">
+                                <span>Or continue with</span>
+                            </div>
+                            
+                            <div class="social-login">
+                                <button type="button" class="social-btn google">
+                                    <i class="fab fa-google"></i>
+                                </button>
+                                <button type="button" class="social-btn apple">
+                                    <i class="fab fa-apple"></i>
+                                </button>
+                                <button type="button" class="social-btn facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="login-link">
+                                Already have an account? <a href="#" id="loginLink">Sign In</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Gallery Tab -->
+                    <div class="tab-pane" id="gallery">
+                        <h2>Learning Experience Gallery</h2>
+                        <div class="gallery-container">
+                            <div class="gallery-controls">
+                                <button class="gallery-btn prev-btn">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="gallery-btn next-btn">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="gallery-wrapper">
+                                <div class="gallery-slides">
+                                    <div class="gallery-slide active">
+                                        <div class="slide-content">
+                                            <h3>Interactive Lessons</h3>
+                                            <p>Engage with our interactive lessons designed by language experts.</p>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide">
+                                        <div class="slide-content">
+                                            <h3>Speech Recognition</h3>
+                                            <p>Practice pronunciation with our advanced speech recognition technology.</p>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide">
+                                        <div class="slide-content">
+                                            <h3>Live Tutoring</h3>
+                                            <p>Connect with professional tutors for personalized learning sessions.</p>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide">
+                                        <div class="slide-content">
+                                            <h3>Cultural Immersion</h3>
+                                            <p>Learn about cultures and traditions along with language skills.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-indicators">
+                                <span class="indicator active" data-slide="0"></span>
+                                <span class="indicator" data-slide="1"></span>
+                                <span class="indicator" data-slide="2"></span>
+                                <span class="indicator" data-slide="3"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <i class="fas fa-check-circle success-icon"></i>
+            <h3>Sign Up Successful!</h3>
+            <p>Welcome to Parlancia! Your account has been created successfully.</p>
+            <button class="btn primary-btn modal-btn">Start Learning</button>
+        </div>
+    </div>
+
+    <div class="modal" id="easterEggModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <i class="fas fa-star easter-egg-icon"></i>
+            <h3>You found a secret!</h3>
+            <p>Congratulations! You've unlocked a special 30% discount on your first premium course.</p>
+            <p>Use code: <strong>LANGUAGE30</strong></p>
+            <button class="btn primary-btn modal-btn">Awesome!</button>
+        </div>
+    </div>
+
+    <div class="konami-code-progress"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
